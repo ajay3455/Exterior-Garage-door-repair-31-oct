@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Gloucester//NONSGML Event//EN
+BEGIN:VEVENT
+UID:garage-repairs-2024@gloucester.com
+DTSTAMP:20231024T000000Z
+DTSTART:20241031T100000Z
+DTEND:20241031T160000Z
+SUMMARY:Main Garage Door Repairs at Gloucester
+DESCRIPTION:Repairs to the main garage door. No access from 10:00 a.m. to 4:00 p.m. on October 31st, 2024.
+LOCATION:3 Gloucester St, Toronto, ON M4Y 0C6
+END:VEVENT
+END:VCALENDAR

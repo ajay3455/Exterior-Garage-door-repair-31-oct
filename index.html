@@ -1,12 +1,256 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Garage Repair Event</title>
+<base href="/">
+<title>Garage Door Repairs Notice - The Gloucester On Yonge</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --accent: #3498db;
+    --warning: #f1c40f;
+    --light: #ecf0f1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    line-height: 1.6;
+    font-size: 12pt;
+    min-height: 100vh;
+}
+
+.notice-container {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.notice-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.building-name {
+    font-weight: 700;
+    font-size: 24pt;
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 28pt;
+    margin: 0 0 20px 0;
+    color: var(--secondary);
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary);
+}
+
+.key-info {
+    background: var(--light);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #dde1e3;
+}
+
+.date-time {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 14pt;
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.important-note {
+    background: #fff3cd;
+    border-left: 4px solid var(--warning);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.contact {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 11pt;
+    color: var(--primary);
+    padding: 20px;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.highlight {
+    background: #ffd700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 10px 0;
+    padding-left: 35px;
+    position: relative;
+}
+
+ul li::before {
+    content: '→';
+    position: absolute;
+    left: 10px;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.emoji-bullet {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+    .notice-container {
+        padding: 20mm;
+        box-shadow: none;
+    }
+}
+
+/* Button styles for 'Save to Calendar' */
+.save-calendar-button {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16pt;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.save-calendar-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.save-calendar-button:hover {
+    background-color: var(--secondary);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+}
+
+.save-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .save-calendar-button {
+        font-size: 14pt;
+        padding: 10px 15px;
+    }
+}
+</style>
 </head>
 <body>
-  <h1>Garage Repair Event</h1>
-  <p>Download the event file <a href="gloucester_garage_repairs.ics">here</a>.</p>
+<div class="notice-container">
+
+    <!-- Save to Calendar Button with Flexbox for Mobile Responsiveness -->
+    <div class="save-container">
+        <a href="gloucester_garage_repairs.ics" class="save-calendar-button">
+            <img src="https://img.icons8.com/fluency/48/000000/calendar.png" alt="Calendar Icon">
+            Save to Calendar
+        </a>
+    </div>
+
+    <div class="header">
+        <div class="building-name">The Gloucester On Yonge</div>
+        <h1>MAIN GARAGE DOOR REPAIRS</h1>
+    </div>
+
+    <div class="key-info">
+        <div class="date-time">
+            📅 Date: Thursday, October 31st, 2024<br>
+            ⏰ Time: 10:00 a.m. to 4:00 p.m.
+        </div>
+
+        <p><strong>📢 Please Note:</strong> Repairs to the garage doors are scheduled for the above date and time.</p>
+
+        <p><strong>During this period:</strong></p>
+        <ul>
+            <li>There will be <span class="highlight">NO access</span> to or from the garage</li>
+            <li><span class="highlight">ALL parking levels</span> will be inaccessible (including commercial parking areas)</li>
+        </ul>
+    </div>
+
+    <div class="important-note">
+        <strong>⚠️ Action Required:</strong>
+        <ul>
+            <li>If you need to use your vehicle during these hours, please remove it from the garage before 10:00 a.m.</li>
+            <li>If your vehicle remains in the garage, you will not be able to access it until the repairs are complete</li>
+            <li>Please make alternative parking arrangements if needed</li>
+        </ul>
+    </div>
+
+    <p>We apologize for any inconvenience and thank you for your cooperation.</p>
+
+    <div class="contact">
+        <p><strong>📞 Questions? Contact the Management Office:</strong><br>
+        Phone: 647-368-7395<br>
+        📧 Email: gloucester.on@fsresidential.com</p>
+        
+        <p><strong>🏢 The Gloucester On Yonge</strong><br>
+        📍 3 Gloucester Street | Toronto, ON M4Y 0C6</p>
+    </div>
+</div>
 </body>
 </html>
